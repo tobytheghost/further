@@ -1,11 +1,6 @@
-import { type TableDataItem } from "../data/tableData";
+import { FormattedRowData } from "../utils/mapData";
 
-type TableRowProps = Record<keyof TableDataItem, string> & {
-  status: string;
-  isHeader?: boolean;
-};
-
-const TableRow = (props: TableRowProps) => {
+const TableRow = (props: FormattedRowData) => {
   const {
     status,
     name,
@@ -16,33 +11,27 @@ const TableRow = (props: TableRowProps) => {
     rawInvestmentTime,
     rawRefundRequestDate,
     rawRefundRequestTime,
-    isHeader,
   } = props;
-  const El = isHeader ? "th" : "td";
   return (
     <tr>
-      <El>
-        {!isHeader ? (
-          <div className="flex items-center gap-2">
-            <span
-              className={`h-2 w-2 flex rounded-full ${
-                status === "Approved" ? "bg-green-500" : "bg-red-500"
-              }`}
-            />
-            <span>{status}</span>
-          </div>
-        ) : (
-          status
-        )}
-      </El>
-      <El>{name}</El>
-      <El>{customerLocation}</El>
-      <El>{rawSignUpDate}</El>
-      <El>{rawRequestSource}</El>
-      <El>{rawInvestmentDate}</El>
-      <El>{rawInvestmentTime}</El>
-      <El>{rawRefundRequestDate}</El>
-      <El>{rawRefundRequestTime}</El>
+      <td>
+        <div className="flex items-center gap-2">
+          <span
+            className={`h-2 w-2 flex rounded-full ${
+              status === "Approved" ? "bg-green-500" : "bg-red-500"
+            }`}
+          />
+          <span>{status}</span>
+        </div>
+      </td>
+      <td>{name}</td>
+      <td>{customerLocation}</td>
+      <td>{rawSignUpDate}</td>
+      <td>{rawRequestSource}</td>
+      <td>{rawInvestmentDate}</td>
+      <td>{rawInvestmentTime}</td>
+      <td>{rawRefundRequestDate}</td>
+      <td>{rawRefundRequestTime}</td>
     </tr>
   );
 };

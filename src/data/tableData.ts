@@ -79,7 +79,4 @@ export const TABLE_ROWS: TableDataItem[] = [
   },
 ] as const;
 
-// Get mapped data (sort of mock API call)
-export const getMappedData = () => {
-  return TABLE_ROWS.map((row) => mapDataToFormattedRow(tableDataItemSchema.parse(row)));
-};
+export const mappedData = TABLE_ROWS.map((row) => mapDataToFormattedRow(tableDataItemSchema.parse(row)));
