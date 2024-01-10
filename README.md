@@ -14,7 +14,7 @@ To run the app in development mode, run `npm run dev`.
 
 Any problems, please let me know!
 
-## Request
+## Task
 
 An investor may receive a refund on their investment into a fund based on specific time limits, which vary depending on whether the requester had signed up to the old or new Terms of Service (TOS) and whether the reversal request was submitted via the phone or on the web-app.
 
