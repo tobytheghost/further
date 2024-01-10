@@ -1,3 +1,21 @@
+# Refund Request Approval App
+
+Hi Further! 👋
+
+This is my submission for the Refund Request Approval App. I've included a few notes below to help you get started.
+
+A live preview can be found here: https://further-orpin.vercel.app/
+
+## Getting Started
+
+To get started, clone the repo and run `npm install` to install the dependencies.
+
+To run the app in development mode, run `npm run dev`.
+
+Any problems, please let me know!
+
+## Request
+
 An investor may receive a refund on their investment into a fund based on specific time limits, which vary depending on whether the requester had signed up to the old or new Terms of Service (TOS) and whether the reversal request was submitted via the phone or on the web-app.
 
 | Request Type | Approval time limit for old TOS | Approval time limit for new TOS |
